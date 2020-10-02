@@ -1,0 +1,2 @@
+INSERT INTO "messages" ("id", "sender_id", "receiver_id", "created_at", "updated_at", "deleted_at", "content") VALUES
+('5ef6ddee-ca0b-4007-9710-150aec1498ec', 'b89666d2-49d2-47b0-92a5-144d21f2cea7', 'acabb08d-6f00-4812-a867-5eaf7cbdbefb', '2020-10-02 08:28:23.202362+00', NULL, NULL, 'Hj');
