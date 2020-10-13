@@ -7,6 +7,7 @@ import (
 	"github.com/phuwn/tools/util"
 
 	"github.com/phuwn/yahee/src/server"
+	"github.com/phuwn/yahee/src/service"
 	"github.com/phuwn/yahee/src/store"
 )
 
@@ -21,5 +22,7 @@ func init() {
 	}
 
 	store := store.New()
-	server.NewServerCfg(store)
+	service := service.New()
+
+	server.NewServerCfg(store, service)
 }

@@ -6,6 +6,7 @@ import (
 	"github.com/phuwn/tools/db"
 	"github.com/phuwn/tools/handler"
 	mw "github.com/phuwn/tools/middleware"
+	"github.com/phuwn/yahee/src/handler/middleware"
 	"github.com/phuwn/yahee/src/handler/ws"
 )
 
@@ -20,6 +21,7 @@ func Router() *echo.Echo {
 	{
 		r.Use(mw.CorsConfig())
 		r.Use(mw.AddTransaction)
+		r.Use(middleware.WithAuth)
 	}
 
 	r.GET("/healthz", healthz)
