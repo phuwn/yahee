@@ -10,7 +10,8 @@ create table users (
 	updated_at timestamp(6) with time zone,
 	deleted_at timestamp(6) with time zone,
 	name varchar(200),
-	email varchar(200)
+	email varchar(200),
+	avatar text
 );
 
 create table connections (
@@ -19,6 +20,7 @@ create table connections (
 	created_at timestamp(6) with time zone default now(),
 	updated_at timestamp(6) with time zone,
 	deleted_at timestamp(6) with time zone,
+	status integer not null,
 	primary key (user_id_1, user_id_2)
 );
 
